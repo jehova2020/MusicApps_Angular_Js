@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+<app-preloader [name]="'Loading artist...'" *ngIf="preloading"></app-preloader>
+<br>
+<section id="top-tracks">
+	<h2 class="center white-text" id="title">Top Albums</h2>
+	<div class="home-container">
+		<div class="row">
+			<div class="col s12 m6" *ngFor="let x of items">
+				<div class="card">
+					<div class="card-content">
+						<div class="card-title black-text">{{x.title}}</div>
+					</div>
+					<div class="card-action">
+						<a (click)="viewDetails(x.id)" class="btn">View Songs</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	#top-tracks {
+		background-image: linear-gradient(#080b0d, #384b5e);
+	}
+
+	#title {
+		padding-top: 50px;
+	}
+</style>

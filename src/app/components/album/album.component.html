@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<div class="section no-pad-bot valign-wrapper" id="top">
+</div>
+
+<app-preloader [name]="'Loading artist...'" *ngIf="preloading"></app-preloader>
+<div class="container animated fadeIn" *ngIf="!preloader">
+	<div class="row">
+		<div class="col l4 m6 s12">
+			<img [src]="album.url | noimage" width="100%">
+		</div>
+		<div class="col l8 m6 s12">
+			<h6>Album: <span class="light">{{album.title}}</span></h6>
+			<h6>Songs: <span class="light">{{songs.length}}</span></h6>
+		</div>
+	</div>
+</div>
+<br>
+<section id="top-tracks">
+	<h2 class="center white-text" id="title">Tracks of {{album.title}}</h2>
+	<div class="home-container">
+		<div class="row">
+			<div class="col s12 m6" *ngFor="let x of songs">
+				<div class="card horizontal ">
+					<div class="card-image">
+						<img [src]="x.thumbnailUrl" height="100%" width="100%">
+					</div>
+					<div class="card-stacked">
+						<div class="card-content">
+							<span class="card-title black-text">{{x.title}}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	#top-tracks {
+		background-image: linear-gradient(#080b0d, #384b5e);
+	}
+
+	#title {
+		padding-top: 50px;
+	}
+</style>

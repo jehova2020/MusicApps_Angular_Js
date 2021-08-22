@@ -1,0 +1,31 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href='#' class="brand-logo">Music App</a>
+    <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a [routerLink]="['/home']" routerLinkActive="active">Home</a></li>
+      <li>
+        <a [routerLink]="['/search']" routerLinkActive="active">Search</a>
+      </li>
+      <li>
+        <a [routerLink]="['/albums']" routerLinkActive="active">Albums</a>
+      </li>
+      <li>
+        <a [routerLink]="['/favorites']" routerLinkActive="active">Favorites</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<ul class="sidenav" id="mobile-nav">
+  <li><a [routerLink]="['/home']" routerLinkActive="active">Home</a></li>
+  <li>
+    <a [routerLink]="['/search']" routerLinkActive="active">Search</a>
+  </li>
+  <li>
+    <a [routerLink]="['/albums']" routerLinkActive="active">Albums</a>
+  </li>
+  <li>
+    <a [routerLink]="['/favorites']" routerLinkActive="active">Favorites</a>
+  </li>
+</ul>
