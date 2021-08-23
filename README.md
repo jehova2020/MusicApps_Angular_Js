@@ -1,4 +1,4 @@
-# angular-music-player
+# Music APP-angular
 
 A Web-based online music streaming app, using Angular and Spotify's Web API
 
